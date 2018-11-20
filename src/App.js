@@ -18,7 +18,12 @@ class BooksApp extends React.Component {
                   { context => <Home { ...context } />}
                 </MyContext.Consumer>
               )} />
-            <Route exact path={"/search"} component={Search} />
+            <Route exact path={"/search"}
+              render={() => (
+                <MyContext.Consumer>
+                  { context => <Search { ...context } />}
+                </MyContext.Consumer>
+              )} />
           </Switch>
         </Provider>
       </div>
