@@ -1,9 +1,8 @@
 import React from 'react'
 // import * as BooksAPI from './BooksAPI'
 import './App.css'
-import Shelf from './components/Shelf'
-import FAB from './components/FAB'
 import Search from './view/Search'
+import Home from './view/Home'
 
 class BooksApp extends React.Component {
   state = {
@@ -22,15 +21,7 @@ class BooksApp extends React.Component {
         {this.state.showSearchPage ? (
           <Search />
         ) : (
-          <div className="list-books">
-            <div className="list-books-title">
-              <h1>MyReads</h1>
-            </div>
-            <div className="list-books-content">
-                <Shelf />
-            </div>
-            <FAB />
-          </div>
+          <Home />
         )}
       </div>
     )
