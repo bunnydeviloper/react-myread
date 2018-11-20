@@ -7,9 +7,8 @@ export default class Home extends Component {
   async componentDidMount() {
     try {
       const books = await getAll();
-      console.log(books);
     } catch (error) {
-    console.log(error)
+      console.log(error)
     }
   }
 
