@@ -20,9 +20,9 @@ export default class Home extends Component {
           <h1>MyReads</h1>
         </div>
         <div className="list-books-content">
-          <Shelf title="Currently Reading" />
-          <Shelf title="Want To Read" />
-          <Shelf title="Read" />
+          <Shelf title="Currently Reading" books={this.props.currentlyReading} />
+          <Shelf title="Want To Read" books={this.props.wantToRead} />
+          <Shelf title="Read" books={this.props.read} />
         </div>
         <FAB />
       </div>
