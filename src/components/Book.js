@@ -4,10 +4,11 @@ import { update } from '../BooksAPI';
 export default class Book extends Component {
   handleChange =async e => {
     try {
-      const shelf = e.target.value;
+      const newShelf = e.target.value;
       const book = this.props;
-      const result = await update(book, shelf);
+      const result = await update(book, newShelf);
       console.log(result);
+      this.props.moveBook(book, newShelf); // update the new state
     } catch (error) {
       console.log(error);
     }
@@ -27,7 +28,7 @@ export default class Book extends Component {
               </div>
               <div className="book-shelf-changer">
                 <select onChange={this.handleChange}>
-                  <option value="move" disabled>Move to...</option>
+                  <option value="move">Move to...</option>
                   <option value="currentlyReading">Currently Reading</option>
                   <option value="wantToRead">Want to Read</option>
                   <option value="read">Read</option>
