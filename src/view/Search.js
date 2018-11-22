@@ -45,8 +45,10 @@ export default class Search extends Component {
         </div>
         <div className="search-books-results">
           <ol className="books-grid">
-            {this.state.books.length > 0 && this.state.books.map(book =>
-              <Book key={book.id} {...book} moveBook={this.props.moveBook} />)}
+            {this.state.books.length > 0 && this.state.books.map(book => {
+              return (
+                <Book key={book.id} {...book} moveBook={this.props.moveBook} />
+              )})}
           </ol>
         </div>
       </div>
