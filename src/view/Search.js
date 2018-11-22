@@ -45,6 +45,9 @@ export default class Search extends Component {
         </div>
         <div className="search-books-results">
           <ol className="books-grid">
+            {this.state.books.length === 0 && (
+              <h1 style={{textAlign: "Center"}}>No Results Found</h1>
+            )}
             {this.state.books.length > 0 && this.state.books.map(book => {
               return (
                 <Book key={book.id} {...book} moveBook={this.props.moveBook} />
