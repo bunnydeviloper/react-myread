@@ -66,7 +66,6 @@ export default class Search extends Component {
               } else {
                 eachBookResult.shelf = "none";
               }
-              console.log(foundBook);
               return (
                 <Book key={eachBookResult.id} {...eachBookResult} moveBook={this.props.moveBook} />
               )})}
