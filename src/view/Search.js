@@ -6,15 +6,27 @@ export default class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      query: ""
+      query: "",
+      books: []
     };
   }
   handleChange = async e => {
     try {
       const query = e.target.value;
-      const result = await search(query);
       this.setState({ query });
-      console.log(result);
+
+      // input validation: only search books if query input is not empty
+      if (query.trim()) {
+        const result = await search(query);
+        if (result.error) {
+          // if can't find any match, we set the books array to empty
+          this.setState({ books: [] });
+        } else {
+          this.setState({ books: result });
+        }
+      } else {
+        this.setState({ books: [] });
+      }
     } catch (error) {
       console.log(error);
     }
