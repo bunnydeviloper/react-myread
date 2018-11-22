@@ -19,10 +19,12 @@ export default class index extends Component {
       moveBook: (book, newShelf, allShelvesUpdated) => {
         // map through all the books in the current state, look for new changes
         const newBookList = this.state.books.map(eachBook => {
-          const foundID = allShelvesUpdated[newShelf].find(bookID => bookID === eachBook.id);
-          // if there's a book that has been moved, we update the shelf for that book
-          if (foundID) {
-            eachBook.shelf = newShelf;
+          if (newShelf !== "none") {
+            const foundID = allShelvesUpdated[newShelf].find(bookID => bookID === eachBook.id);
+            // if there's a book that has been moved, we update the shelf for that book
+            if (foundID) {
+              eachBook.shelf = newShelf;
+            }
           }
           return eachBook; // each book will be added to the newBookList array
         });
