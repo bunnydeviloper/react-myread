@@ -6,9 +6,8 @@ export default class Book extends Component {
     try {
       const newShelf = e.target.value;
       const book = this.props;
-      const result = await update(book, newShelf);
-      console.log(result);
-      this.props.moveBook(book, newShelf); // update the new state
+      const allShelvesUpdated = await update(book, newShelf);
+      this.props.moveBook(book, newShelf, allShelvesUpdated); // update the new state
     } catch (error) {
       console.log(error);
     }

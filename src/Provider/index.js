@@ -16,13 +16,17 @@ export default class index extends Component {
         const read = books.filter(book => book.shelf === "read");
         this.setState({ books, currentlyReading, wantToRead, read });
       },
-      moveBook: (book, newShelf, allShelves) => {
-        console.log('newShelf ', newShelf);
-        console.log('allShelves ', allShelves);
-        // first map through all the books in the current state
-        const newBook = this.state.books.map(allBooks => {
-          // if you find
+      moveBook: (book, newShelf, allShelvesUpdated) => {
+        // map through all the books in the current state, look for new changes
+        const newBookList = this.state.books.map(eachBook => {
+          const foundID = allShelvesUpdated[newShelf].find(bookID => bookID === eachBook.id);
+          // if there's a book that has been moved, we update the shelf for that book
+          if (foundID) {
+            eachBook.shelf = newShelf;
+          }
+          return eachBook; // each book will be added to the newBookList array
         });
+        this.state.addBooks(newBookList); // update old -> new book list
       }
     };
   }
