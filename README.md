@@ -57,3 +57,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Contributing
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+
+#### Project was completed with the tuturial from coach [Forrest Walker](https://github.com/forrestw92/brain-reads)
+* [LINK](https://www.youtube.com/watch?v=bpKI3R0nf7E)
