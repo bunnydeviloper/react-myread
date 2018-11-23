@@ -1,5 +1,7 @@
 # MyReads Project
 
+# Project [**Requirements**](https://review.udacity.com/#!/rubrics/918/view)
+
 # Usage
 * install all project dependencies with `npm install`
 * start the development server with `npm start`
