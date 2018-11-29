@@ -1,6 +1,6 @@
 # MyReads Project
 
-# Project [**Requirements**](https://review.udacity.com/#!/rubrics/918/view)
+* [**Requirements**](https://review.udacity.com/#!/rubrics/918/view)
 
 # Demo: [react-bookshelf](https://react-bookshelf.netlify.com)
 
