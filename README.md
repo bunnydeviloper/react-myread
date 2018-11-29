@@ -2,6 +2,8 @@
 
 # Project [**Requirements**](https://review.udacity.com/#!/rubrics/918/view)
 
+# Demo: [react-bookshelf](https://react-bookshelf.netlify.com)
+
 # Usage
 * install all project dependencies with `npm install`
 * start the development server with `npm start`
