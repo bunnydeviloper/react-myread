@@ -4,6 +4,11 @@
 
 # Demo: [react-bookshelf](https://react-bookshelf.netlify.com)
 
+# Screenshots:
+<img src='./public/home.png' width="400px" />
+<img src='./public/search.png' width="400px" />
+<img src='./public/move.png' width="200px" />
+
 # Usage
 * install all project dependencies with `npm install`
 * start the development server with `npm start`
